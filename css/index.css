@@ -1,0 +1,18 @@
+#header{
+    position: relative;
+}
+
+#header .container{
+    width: 100%;
+    position: absolute;
+    top:25%;
+}
+#header .container h1{
+    font-size: 20px;
+}
+
+body{
+    height: 1000px;
+}
+
+
