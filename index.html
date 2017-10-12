@@ -11,37 +11,207 @@
     <link rel="shortcut icon" href="img/favicon.ico"/>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/animate.min.css">
 
     <link rel="stylesheet" href="css/fakeLoader.css">
 
     <link rel="stylesheet" href="css/index.css">
 
+
+
 </head>
 <body>
-
+    
     <!--开场动画的容器-->
     <div class="fakeloader"></div>
 
     <!--为了防止闪屏现象套的大div-->
     <div id="all" style="display: none">
 
-
+        <!--#back-to-top-->
+        <div id="top"></div>
 
         <header id="header">
 
-            <img src="img/img-1.jpg" alt="" class="img-responsive animated bounceInUp">
+            <figure class="huge animated fadeIn"></figure>
+            <!--<img class="img-responsive animated fadeIn">-->
             <div class="container">
 
-                <h1 class="text-left animated rollIn">hello，我是侯伟</h1>
+                <h1 class="text-left animated bounceInLeft">Hello，我是侯伟</h1>
+                <p class="animated bounceInLeft">一只富有激情，热爱创造的程序猿</p>
+                <br>
+                <div class="text animated bounceInLeft">
 
+                    <span class="first"><small>更多</small><a href="#about" onclick="js_about()">关于我</a></span>
+
+                    <span class="second"><small>了解</small><a href="#skills" onclick="js_skills()">技能</a></span>
+
+                    <div class="third"><small>联系</small><a href="#contact" onclick="js_contact()">邮件&电话</a></div>
+
+                    <!--<span class="first"><small>更多</small><a href="javascript:void(0);" onclick="js_about()">关于我</a></span>-->
+
+                    <!--<span class="second"><small>了解</small><a href="javascript:void(0);" onclick="js_skills()">技能</a></span>-->
+
+                    <!--<div class="third"><small>联系</small><a href="javascript:void(0);" onclick="js_contact()">邮件&电话</a></div>-->
+                    <!--a href="javascript:void(0);" onclick="js_method()"-->
+                </div>
             </div>
+
+
+
 
         </header>
 
-        <article>
-        </article>
 
+
+
+        <section id="about">
+            
+
+            <div class="container-fluid">
+                <!--响应式布局-->
+                <div class="row">
+
+                    <!--<div class="col-md-6 col-sm-6 col-xs-12 left"style="background: #f00;">-->
+                    <div class="col-md-6 col-sm-6 col-xs-12 left">
+                        <div class="wrapper">
+
+                            <h2 class="leader">More About Me</h2>
+
+                            <p>
+
+                                一名计算机科学技术学院的学生，专业是 <abbr title="偏向软件方向">物联网工程</abbr>
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                    <!--<div class="col-md-6 col-sm-6 col-xs-12 right"style="background: #00ff00;">-->
+                    <div class="col-md-6 col-sm-6 col-xs-12 right">
+
+
+                        <div class="wrapper">
+
+                            <h2 class="leader">What I Do</h2>
+
+                            <p>
+
+                                从小就喜欢计算机，电脑，手机等电子产品，对新事物上手起来也很快。<br>喜欢创新，喜欢动手。
+
+                            </p>
+
+
+                            <div class="media">
+                                <div class="media-left">
+
+                                    <img class="media-object" src="img/ico-pic.png" alt="..." style="width: 45px;">
+                                </div>
+                                <div class="media-body" style="padding-left: 15px;">
+                                    <h4 class="media-heading">修图技术</h4>
+                                    <span class="small">了解基础的PS和AI设计和修改，可以按要求制作一定效果的图片。图片的后期也经常使用。</span>
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left">
+
+                                    <img class="media-object" src="img/ico-debug.png" alt="..." style="width: 45px;">
+                                </div>
+                                <div class="media-body" style="padding-left: 15px;">
+                                    <h4 class="media-heading">程序调试</h4>
+                                    <span class="small">对基础的编程语言的调试十分熟悉，能熟练的设置断点，适当的输出等技巧来判断bug的类型。</span>
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left">
+
+                                    <img class="media-object" src="img/ico-web.png" alt="..." style="width: 45px;">
+                                </div>
+                                <div class="media-body" style="padding-left: 15px;">
+                                    <h4 class="media-heading">前端水平</h4>
+                                    <span>经过一段时间的集中学习，对基础的HTML，CSS，JS部分已经比较熟悉。能运用知识完成对主流网站的模仿。</span>
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left">
+
+                                    <img class="media-object" src="img/ico-video.png" alt="..." style="width: 45px;">
+                                </div>
+                                <div class="media-body" style="padding-left: 15px;">
+                                    <h4 class="media-heading">修图技术</h4>
+                                    <span>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section id="skills">
+
+
+        </section>
+
+
+
+
+        <section id="experience">
+
+
+        </section>
+
+
+
+
+        <section id="photo">
+
+
+        </section>
+
+
+
+        <section id="contact">
+
+
+        </section>
+
+
+        <footer>
+
+
+        </footer>
+
+        <!--<div class="container">-->
+
+
+            <!--<div class="row">-->
+                <!--<div class="col-xs-12 col-sm-6 col-md-8" style="background: #f00;">.col-xs-12 .col-sm-6 .col-md-8</div>-->
+                <!--<div class="col-xs-6 col-md-4" style="background: #00ff00;">.col-xs-6 .col-md-4</div>-->
+            <!--</div>-->
+
+
+        <!--</div>-->
 
     </div>
 
@@ -60,5 +230,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/fakeLoader.js"></script>
+    <script>
+
+
+    </script>
 </body>
 </html>

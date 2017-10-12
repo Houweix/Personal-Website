@@ -11,6 +11,35 @@ $(document).ready(function(){
 
 
 
+    var $top = $("#top");
+
+    $top.css("display","none");
+    // 监听滚动事件
+    $(window).scroll(function(){
+        if ($(window).scrollTop()>100){
+            $top.fadeIn(500);
+        }
+        else
+        {
+            $top.fadeOut(500);
+        }
+    });
+
+    //当点击跳转链接后，回到页面顶部位置
+    $top.click(function(){
+        //$('body,html').animate({scrollTop:0},1000);
+        if ($('html').scrollTop()) {
+            $('html').animate({ scrollTop: 0 }, 600);
+            return false;
+        }
+        $('body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+
+
+
+
 
 });
+
 
