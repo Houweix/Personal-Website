@@ -39,6 +39,56 @@ $(document).ready(function(){
 
 
 
+    //初始化aniview
+    var options = {
+        animateThreshold: 100
+    }
+
+    $('.aniview').AniView(options);
+
+
+
+
+
+    var oContainer = document.getElementById("container1");
+    var counter = 0;
+
+    //循环生成所有的图片并预加载
+    for(var i=0; i<9; i++){
+        //图片预加载
+        var oImg = new Image();
+        oImg.onload = function(){
+            counter++;
+            if(counter == 9){
+                loadSuccess();
+            }
+        };
+        oImg.src = "img/"+(i + 1) +".jpg";
+//            oImg.style.transform = "rotateY(0deg) translateZ(0)";
+        //动态加入DOM结构
+        oContainer.appendChild(oImg);
+    }
+
+    var num = 0;
+    oContainer.onclick = function(){
+        //num是一个系数，每次点击旋转的度数要乘以这个系数
+        num++;
+        oContainer.style.transform = "rotateY("+ num * 40 +"deg)";
+    };
+
+
+    function loadSuccess(){
+        var aImg = oContainer.getElementsByTagName("img");
+        for(var i=0; i<aImg.length; i++){
+            aImg[i].style.transitionDelay = i * 100 + "ms";
+            //拼接字符串的时候出现加法要加括号
+            aImg[i].style.transform = "rotateY("+ (i + 1) * 40 +"deg) translateZ(270px)";
+        }
+
+
+    }
+
+
 
 });
 

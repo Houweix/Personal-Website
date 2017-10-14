@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,14 +14,25 @@
     <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/animate.min.css">
 
+
+    <!--全屏插件-->
     <link rel="stylesheet" href="css/fakeLoader.css">
 
     <link rel="stylesheet" href="css/index.css">
 
 
+    <!--进度条-->
+    <link rel="stylesheet" href="css/skills.css">
+
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css" />
+    <script src="js/modernizr-custom.js"></script>
+
 
 </head>
-<body>
+<body class="demo-2">
     
     <!--开场动画的容器-->
     <div class="fakeloader"></div>
@@ -31,6 +42,13 @@
 
         <!--#back-to-top-->
         <div id="top"></div>
+
+        <!--<nav id="menu">-->
+            <!--<header>-->
+                <!--<h2>Menu</h2>-->
+            <!--</header>-->
+        <!--</nav>-->
+
 
         <header id="header">
 
@@ -69,32 +87,39 @@
         <section id="about">
             
 
-            <div class="container-fluid">
+            <div class="container-fluid" >
                 <!--响应式布局-->
                 <div class="row">
 
                     <!--<div class="col-md-6 col-sm-6 col-xs-12 left"style="background: #f00;">-->
-                    <div class="col-md-6 col-sm-6 col-xs-12 left">
+                    <div class="col-md-6 col-sm-6 col-xs-12 left" style="margin-top: 20px">
                         <div class="wrapper">
 
                             <h2 class="leader">More About Me</h2>
 
                             <p>
 
-                                一名计算机科学技术学院的学生，专业是 <abbr title="偏向软件方向">物联网工程</abbr>
+                                一名计算机科学技术学院的大三学生，专业是 <abbr title="偏向软件方向">物联网工程</abbr>
 
                             </p>
 
+
+                            <img src="img/lot.jpg" alt="" class="img-responsive img-thumbnail">
+
                         </div>
+
+
+
+
 
 
                     </div>
 
                     <!--<div class="col-md-6 col-sm-6 col-xs-12 right"style="background: #00ff00;">-->
-                    <div class="col-md-6 col-sm-6 col-xs-12 right">
+                    <div class="col-md-6 col-sm-6 col-xs-12 right" >
 
 
-                        <div class="wrapper">
+                        <div class="wrapper" style="padding-top: 20px">
 
                             <h2 class="leader">What I Do</h2>
 
@@ -106,7 +131,7 @@
 
 
                             <div class="media">
-                                <div class="media-left">
+                                <div class="media-left" style="vertical-align: top">
 
                                     <img class="media-object" src="img/ico-pic.png" alt="..." style="width: 45px;">
                                 </div>
@@ -134,22 +159,20 @@
                                 </div>
                                 <div class="media-body" style="padding-left: 15px;">
                                     <h4 class="media-heading">前端水平</h4>
-                                    <span>经过一段时间的集中学习，对基础的HTML，CSS，JS部分已经比较熟悉。能运用知识完成对主流网站的模仿。</span>
+                                    <span class="small">经过一段时间的集中学习，对基础的HTML，CSS，JS部分已经比较熟悉。能运用知识完成对主流网站的模仿。</span>
                                 </div>
                             </div>
 
-                            <div class="media">
+                            <div class="media" style="margin-bottom: 40px">
                                 <div class="media-left">
 
                                     <img class="media-object" src="img/ico-video.png" alt="..." style="width: 45px;">
                                 </div>
                                 <div class="media-body" style="padding-left: 15px;">
-                                    <h4 class="media-heading">修图技术</h4>
-                                    <span>
-                                    </span>
+                                    <h4 class="media-heading">视频剪辑</h4>
+                                    <span class="small">能熟练的使用AE制作特效，使用VideoStudio和Premiere Pro剪辑视频。</span>
                                 </div>
                             </div>
-
 
                         </div>
 
@@ -168,26 +191,91 @@
 
 
 
-        <section id="skills">
+        <section id="skills" class="clearfix" >
+
+            <div class="contain">
+
+                <div class="wrapper aniview" av-animation="fadeInUp" style="margin-top: 70px;">
+
+                    <h3 style="padding-left: 40px; ">我的技能</h3>
+
+                    <p style="padding-left: 40px; margin-top: 30px">
+                        大学三年对编程有了一定的理解。从面向过程的C，再到面向对象的C++、java和js等。
+                        <br/>
+                        前端方面对HTML、CSS、JS比较熟悉。对H5和C3也有一定的了解。响应式框架bootstrap，js框架jquery等都有涉足。
+
+
+                    </p>
+
+                    <ul class="skill-bars " >
+
+                        <li>
+                            <div class="progress percent70"><span>70%</span></div>
+                            <strong>HTML5</strong>
+                        </li>
+                    </ul>
+
+                    <ul class="skill-bars" >
+
+                        <li>
+                            <div class="progress percent90"><span>90%</span></div>
+                            <strong>CSS3</strong>
+                        </li>
+                    </ul>
+
+
+                    <ul class="skill-bars" >
+
+                        <li>
+                            <div class="progress percent50"><span>50%</span></div>
+                            <strong>JQUERY</strong>
+                        </li>
+                    </ul>
+
+
+                    <ul class="skill-bars" >
+
+                        <li>
+                            <div class="progress percent60"><span>60%</span></div>
+                            <strong>Bootstrap</strong>
+                        </li>
+                    </ul>
+
+
+                    <ul class="skill-bars" >
+
+                        <li>
+                            <div class="progress percent60"><span>60%</span></div>
+                            <strong>Java</strong>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+
+
+            </div>
 
 
         </section>
 
 
-
-
-        <section id="experience">
-
-
-        </section>
 
 
 
 
         <section id="photo">
 
+            <h3 class="text-center">作品展示，3D旋转木马</h3>
+
+            <div id="container1"></div>
 
         </section>
+
+
+
+
 
 
 
@@ -227,12 +315,18 @@
 
     <!--引入jquery标签-->
     <script src="js/jquery-1.11.2.js"></script>
+    <!--<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>-->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/fakeLoader.js"></script>
-    <script>
+    <!--<script src="js/slideout.min.js"></script>-->
+    <script src="js/jquery.aniview.min.js"></script>
 
 
-    </script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>

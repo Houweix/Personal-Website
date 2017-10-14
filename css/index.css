@@ -138,16 +138,29 @@ html{
     margin: 0 auto;
 
 }
-
-#about .container-fluid .row .left{
-
-    height: 400px;
-    background: rgba(0, 0, 0, .9);
-    color: #fff;
+#about .container-fluid .row{
+    background: #EBEBEB;
 }
 
+
+#about .container-fluid .row .left{
+    color: #353535;
+    height: 100%;
+    background: #EBEBEB;
+    /*background-image: url(../img/about.jpg);*/
+    background-size: contain;
+    /*opacity: .35;*/
+    color: #555;
+    /*height: 500px;*/
+}
+
+
+
+
+
 #about .container-fluid .row .right{
-    height: 400px;
+    background: #fff;
+    /*height: 500px;*/
 
 }
 
@@ -155,19 +168,74 @@ html{
 
 
 
+/*skills开始*/
 
 
 
 
 
 
+#skills{
+
+    /*高度/宽度*/
+    background: url(../img/skills-bg.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+#skills .contain{
+
+    /*position: absolute;*/
+    /*top: 0px;*/
+
+}
+
+#skills .contain .wrapper{
+    width: 80%;
+    margin: 20px auto 20px;
+    color: #fff;
+
+}
+
+#skills .contain .wrapper.skill-bars{
+    width: 75%;
+}
+
+
+@media (max-width: 659px){
+
+    #skills .contain .wrapper{
+        margin-left: -8px;
+    }
+
+}
+
+
+/*skills结束*/
 
 
 
+#container1{
+    width: 190px;
+    height: 108px;
+    position: relative;
+    margin: 200px auto;
+    transform-style: preserve-3d;
+    /*background: #ff0000;*/
+    transition: all 1s ease;
+}
+#container1 img{
+    width: 190px;
+    height: 108px;
+    position: absolute;
+    transition: all 1s ease;
+}
 
 
-
-
+#photo{
+    perspective: 1000px;
+    perspective-origin: center 100px;
+}
 
 
 
