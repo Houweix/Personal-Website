@@ -2,151 +2,258 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>houwei 's world</title>
-    <!--选项卡的小图标-->
-    <link rel="shortcut icon" href="imgs/favicon.ico"/>
-    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css"/>
-    <link href="css/main.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>houwei's world</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico" />
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
 
-</head>
+    <script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+                menu: '#menu',
+                //定义以毫秒为单位的滚动速度。
+                scrollingSpeed: 700,
+                loopTop: true,
+                loopBottom: true,
 
+                navigation: true,
+                navigationPosition: 'right',
+                //导航hover提示的文字
+                navigationTooltips: ['First page', 'Second page', 'Third and last page', 'lastPage'],
+                // responsiveWidth: 968,
+            });
+        });
+    </script>
+    <style>
+        #fp-nav {
+            top: 30%;
+        }
 
-<body>
+        img {
+            width: 100%;
+            height: 100%;
+        }
 
-<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
-<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
-<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
+        /*进度条*/
 
+        .loader-bg {
 
-<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);"
-     data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+            position: fixed;
+            background-color: #eee;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+        }
 
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
 
-<div id="intro" class="container" data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;"
-     data-500="opacity:0;top:-10%;transform:rotate(-90deg);">
+            width: 200px;
+            height: 200px;
 
-    <h2 class="text-center">Hi，Welcome to My home~ </h2>
-    <div class="row">
+            margin-top: -100px;
+            margin-left: -100px;
 
-        <div class="col-md-6">
-            <img id="about-img" class="img-responsive img-rounded center-block" src="imgs/about.jpg" alt="">
+            z-index: 1000000;
 
-        </div>
-        <div class="col-md-6">
-            <h3>My name is 侯伟</h3>
-            <p style="margin-top: 30px">想了解更多？</p>
-            <p style="margin-top: 30px">let's get scrolling :-)</p>
-            <p style="margin-top: 30px" class="arrows">▼&nbsp;▼&nbsp;▼</p>
-        </div>
-    </div>
-</div>
-
-
-<div id="transform" data-500="transform:scale(0) rotate(0deg);"
-     data-1000="transform:scale(1) rotate(1440deg);opacity:1;"
-     data-1600="" data-1700="transform:scale(5) rotate(3240deg);opacity:0;">
-
-    <h2>transform</h2>
-
-    <p>scale, skew and rotate the sh** out of any element</p>
-
-</div>
-
-
-<div id="properties" data-1700="top:100%;" data-2200="top:0%;" data-3000="display:block;"
-     data-3700="top:-100%;display:none;">
-
-    <h2>all numeric properties</h2>
-
-    <p>width, height, padding, font-size, z-index, blah blah blah</p>
-
-</div>
-
-
-<div id="easing_wrapper" data-0="display:none;" data-3900="display:block;"
-     data-4900="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);"
-     data-5900="background:rgba(0,0,0,1);color:rgb(255,255,255);" data-10000="top:0%;" data-12000="top:-100%;">
-
-    <div id="easing" data-3900="left:100%" data-4600="left:25%;">
-
-        <h2>easing?</h2>
-
-        <p>sure.</p>
-
-        <p>let me dim the
-            <span data-3900="" data-4900="color[swing]:rgb(0,0,0);" data-5900="color:rgb(255,255,0);">lights</span>
-            for this one...</p>
-
-        <p data-5900="opacity:0;font-size:100%;" data-6500="opacity:1;font-size:150%;">you can set easings for each
-            property and define own easing functions</p>
-
-    </div>
+        }
 
 
-    <div class="drop" data-6500="left:15%;bottom:100%;" data-9500="bottom:0%;">linear</div>
+        /* The dot */
 
-    <div class="drop" data-6500="left:25%;bottom[quadratic]:100%;" data-9500="bottom:0%;">quadratic</div>
+        .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
 
-    <div class="drop" data-6500="left:35%;bottom[cubic]:100%;" data-9500="bottom:0%;">cubic</div>
+            width: 160px;
+            height: 100px;
 
-    <div class="drop" data-6500="left:45%;bottom[swing]:100%;" data-9500="bottom:0%;">swing</div>
+            margin-top: -50px;
+            margin-left: -80px;
 
-    <div class="drop" data-6500="left:55%;bottom[WTF]:100%;" data-9500="bottom:0%;">WTF</div>
+            border-radius: 5px;
 
-    <div class="drop" data-6500="left:65%;bottom[inverted]:100%;" data-9500="bottom:0%;">inverted</div>
+            background-color: #1e3f57;
 
-    <div class="drop" data-6500="left:75%;bottom[bounce]:100%;" data-9500="bottom:0%;">bounce</div>
+            transform-type: preserve-3d;
 
-</div>
+            animation: dot1 3s cubic-bezier(.55, .3, .24, .99) infinite;
+        }
 
+        .dot:nth-child(2) {
+            z-index: 11;
 
-<div id="download" data-10000="top[cubic]:100%;border-radius[cubic]:0em;background:rgb(0,50,100);border-width:0px;"
-     data-12000="top:10%;border-radius:2em;background:rgb(190,230,255);border-width:10px;">
+            width: 150px;
+            height: 90px;
 
-    <h2>the end</h2>
+            margin-top: -45px;
+            margin-left: -75px;
 
-    <p>by the way, you can also animate colors (you did notice this, didn't you?)</p>
+            border-radius: 3px;
 
+            background-color: #3c617d;
 
-    <p>Check out more examples</p>
+            animation-name: dot2;
+        }
 
-    <p>Handcrafted by Follow @Prinzhorn
+        .dot:nth-child(3) {
+            z-index: 12;
 
-        <script>
-            !function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        </script>
-    </p>
+            width: 40px;
+            height: 20px;
 
-</div>
+            margin-top: 50px;
+            margin-left: -20px;
 
+            border-radius: 0 0 5px 5px;
 
-<div id="scrollbar" data-0="top:0%;margin-top:2px;" data-end="top:100%;margin-top:-52px;"></div>
-<script src="js/jquery-3.1.0.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="skrollr.min.js"></script>
-<script type="text/javascript">
-    var s = skrollr.init({
-        edgeStrategy: 'set',
-        easing: {
-            WTF: Math.random,
-            inverted: function (p) {
-                return 1 - p;
+            background-color: #6bb2cd;
+
+            animation-name: dot3;
+        }
+
+        @keyframes dot1 {
+            3%,
+            97% {
+                width: 160px;
+                height: 100px;
+
+                margin-top: -50px;
+                margin-left: -80px;
+            }
+            30%,
+            36% {
+                width: 80px;
+                height: 120px;
+
+                margin-top: -60px;
+                margin-left: -40px;
+            }
+            63%,
+            69% {
+                width: 40px;
+                height: 80px;
+
+                margin-top: -40px;
+                margin-left: -20px;
             }
         }
-    });
-</script>
+
+        @keyframes dot2 {
+            3%,
+            97% {
+                width: 150px;
+                height: 90px;
+
+                margin-top: -45px;
+                margin-left: -75px;
+            }
+            30%,
+            36% {
+                width: 70px;
+                height: 96px;
+
+                margin-top: -48px;
+                margin-left: -35px;
+            }
+            63%,
+            69% {
+                width: 32px;
+                height: 60px;
+
+                margin-top: -30px;
+                margin-left: -16px;
+            }
+        }
+
+        @keyframes dot3 {
+            3%,
+            97% {
+                width: 40px;
+                height: 20px;
+
+                margin-top: 50px;
+                margin-left: -20px;
+            }
+            30%,
+            36% {
+                width: 8px;
+                height: 8px;
+
+                margin-top: 49px;
+                margin-left: -5px;
+
+                border-radius: 8px;
+            }
+            63%,
+            69% {
+                width: 16px;
+                height: 4px;
+
+                margin-top: -37px;
+                margin-left: -8px;
+
+                border-radius: 10px;
+            }
+        }
+
+
+        /*进度条结束*/
+    </style>
+</head>
+
+<body>
+    <!--首次加载loader-->
+    <div class="loader-bg">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div id="fullpage">
+        <div class="section">
+
+            <img src="http://imgstore.cdn.sogou.com/app/a/100540002/399133.jpg" alt="">
+
+        </div>
+        <div class="section">
+
+            <div class="slide">
+                <img src="http://pic1.win4000.com/wallpaper/a/5902b86962a0c.jpg" alt=""> </div>
+            <div class="slide">
+                <img src="http://imgstore.cdn.sogou.com/app/a/100540002/435825.jpg" alt=""> </div>
+            <div class="slide">
+                <img src="http://dl.bizhi.sogou.com/images/2012/03/17/100732.jpg" alt=""> </div>
+            <div class="slide">
+                <img src="http://pic1.win4000.com/wallpaper/c/565d6aa449c8d.jpg" alt=""> </div>
+
+        </div>
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+    </div>
+    <script>
+        document.onreadystatechange = function () {
+            console.log(document.readyState);
+            if (document.readyState == "complete") { //当页面加载状态为完全结束时进入
+                $('.loader-bg').fadeOut('swing'); //加载动画隐藏
+            }
+        }
+    </script>
 </body>
 
 </html>
