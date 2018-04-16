@@ -33,65 +33,21 @@
   bottom: 0;
   height: 50px;
 }
+#header .logo{
 
-#header a {
-  border-bottom-color: rgba(255, 255, 255, 0.35);
-  color: rgba(255, 255, 255, 0.8);
+  width: 10%;
+  border-radius: 50%;
 }
 
-#header a:hover {
-  border-bottom-color: transparent;
-  color: #4eb980;
+@media (max-width: 496px) {
+  #header .logo{
+    width: 35%;
+  }
 }
 
-#header strong,
-#header b {
-  color: white;
-}
+/* header结束 */
 
-#header h1,
-#header h2,
-#header h3,
-#header h4,
-#header h5,
-#header h6 {
-  color: white;
-}
+/* product开始 */
 
-#header input[type="submit"],
-#header input[type="reset"],
-#header input[type="button"],
-#header .button {
-  background: white;
-  color: #544d55;
-}
 
-#header .logo {
-  background: #4eb980;
-  border-radius: 100%;
-  color: white;
-  cursor: default;
-  display: inline-block;
-  font-size: 2.25em;
-  height: 2.35em;
-  line-height: 2.35em;
-  margin: 0 0 0.75em 0;
-  text-align: center;
-  width: 2.35em;
-}
-
-#header .logo.fa-paper-plane-o:before {
-  left: -0.075em;
-  position: relative;
-}
-
-#header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-#header p {
-  font-size: 1.5em;
-  line-height: 1.5em;
-  margin: 0.25em 0 0 0;
-}
+/* product结束 */
